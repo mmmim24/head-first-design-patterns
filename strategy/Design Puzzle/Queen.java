@@ -1,11 +1,12 @@
 import java.util.Scanner;
 public class Queen extends Character{
     public Queen(){
-        name = "Archer Queen ";
-        heroTier = "🌟🌟 ";
-        weapon = new BowAndArrowBehavior();
+        this.name = "Archer Queen ";
+        this.heroTier = "🌟🌟 ";
+        this.weapon = new BowAndArrowBehavior();
     }
 
+    @Override
     public void chooseWeapon(){
         System.out.println("Set a new weapon\n1. Axe 🪓\n2. Bow and Arrow 🏹\n3. Knife 🔪\n4. Sword ⚔️\n");
         Scanner sc = new Scanner(System.in);

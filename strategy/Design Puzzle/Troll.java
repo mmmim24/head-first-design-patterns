@@ -1,10 +1,12 @@
 import java.util.Scanner;
 public class Troll extends Character{
     public Troll(){
-        name = "Minion Prince ";
-        heroTier = "🌟🌟🌟 ";
-        weapon = new KnifeBehavior();
+        this.name = "Minion Prince ";
+        this.heroTier = "🌟🌟🌟 ";
+        this.weapon = new KnifeBehavior();
     }
+
+    @Override
     public void chooseWeapon(){
         System.out.println("Set a new weapon\n1. Axe 🪓\n2. Bow and Arrow 🏹\n3. Knife 🔪\n4. Sword ⚔️\n");
         Scanner sc = new Scanner(System.in);

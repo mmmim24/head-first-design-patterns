@@ -4,9 +4,10 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement{
 
     public CurrentConditionsDisplay(WeatherData weatherData){
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        this.weatherData.registerObserver(this);
     }
 
+    @Override
     public void update(){
         this.temp = weatherData.getTemp();
         this.humidity = weatherData.getHumidity();
@@ -14,6 +15,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement{
         display();
     }
 
+    @Override
     public void display(){
         System.out.println("Current Conditions: "+ temp+"° C degrees and "+humidity+"% humidity with "+pressure+" bar pressure");
     }

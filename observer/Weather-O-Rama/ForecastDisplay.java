@@ -5,9 +5,10 @@ public class ForecastDisplay implements Observer, DisplayElement {
 
 	public ForecastDisplay(WeatherData weatherData) {
 		this.weatherData = weatherData;
-		weatherData.registerObserver(this);
+		this.weatherData.registerObserver(this);
 	}
 
+	@Override
 	public void update() {
 		float pressure = weatherData.getPressure();
         lastPressure = currentPressure;
@@ -16,6 +17,7 @@ public class ForecastDisplay implements Observer, DisplayElement {
 		display();
 	}
 
+	@Override
 	public void display() {
 		System.out.print("Forecast: ");
 		if (currentPressure > lastPressure) {
