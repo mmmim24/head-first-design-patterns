@@ -3,7 +3,7 @@ public class NYStylePepperoniPizza extends Pizza {
 		this.name = "NY Style Pepperoni Pizza";
 		this.dough = "Thin Crust Dough";
 		this.sauce = "Marinara Sauce";
- 
+
 		this.toppings.add("Grated Reggiano Cheese");
 		this.toppings.add("Sliced Pepperoni");
 		this.toppings.add("Garlic");

@@ -7,15 +7,15 @@ abstract public class Pizza {
 	List<String> toppings = new ArrayList<String>();
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void prepare() {
-		System.out.println("Prepare " + name);
+		System.out.println("Prepare " + this.name);
 		System.out.println("Tossing dough...");
 		System.out.println("Adding sauce...");
 		System.out.println("Adding toppings: ");
-		for (String topping : toppings) {
+		for (String topping : this.toppings) {
 			System.out.println("   " + topping);
 		}
 	}
@@ -35,10 +35,10 @@ abstract public class Pizza {
     @Override
 	public String toString() {
 		StringBuffer display = new StringBuffer();
-		display.append("---- " + name + " ----\n");
-		display.append(dough + "\n");
-		display.append(sauce + "\n");
-		for (String topping : toppings) {
+		display.append("---- " + this.name + " ----\n");
+		display.append(this.dough + "\n");
+		display.append(this.sauce + "\n");
+		for (String topping : this.toppings) {
 			display.append(topping + "\n");
 		}
 		return display.toString();

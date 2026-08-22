@@ -3,7 +3,7 @@ public class NYStyleVeggiePizza extends Pizza {
 		this.name = "NY Style Veggie Pizza";
 		this.dough = "Thin Crust Dough";
 		this.sauce = "Marinara Sauce";
- 
+
 		this.toppings.add("Grated Reggiano Cheese");
 		this.toppings.add("Garlic");
 		this.toppings.add("Onion");
